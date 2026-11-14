@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Micromamba 环境",
+    "description": "在侧边栏面板中查看 micromamba 环境、解释器与已安装软件包，并提供只读的智能体工具。"
+  }
+}

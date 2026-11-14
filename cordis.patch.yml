@@ -1,0 +1,8 @@
+# dsh-micromamba-env bundle patch.
+#
+# One top-level insert: the Loader mounts this package's main entry (index.js)
+# as the Host half. The `dsh.client` declaration in package.json loads
+# ./client.js as the browser half.
+- insert:
+    - id: micromamba-env
+      name: 'dsh-micromamba-env'

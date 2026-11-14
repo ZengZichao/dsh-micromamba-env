@@ -1,0 +1,61 @@
+{
+  "name": "dsh-micromamba-env",
+  "version": "0.4.0",
+  "private": true,
+  "description": "View micromamba environments and select one per DeepSeek Harness workspace: a sidebar panel, a composer picker, and read-only agent tools.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib/*.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check:runtime": "node scripts/check-runtime-compat.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": { "optional": true }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "micromamba",
+    "conda",
+    "environment"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZengZichao/dsh-micromamba-env.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZengZichao/dsh-micromamba-env/issues"
+  },
+  "homepage": "https://github.com/ZengZichao/dsh-micromamba-env#readme",
+  "dsh": {
+    "harness": ">=0.2.0",
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

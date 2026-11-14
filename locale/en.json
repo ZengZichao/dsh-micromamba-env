@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Micromamba environments",
+    "description": "View micromamba environments, their interpreters, and installed packages in a sidebar panel, with read-only agent tools."
+  }
+}
